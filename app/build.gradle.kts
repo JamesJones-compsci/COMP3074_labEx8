@@ -1,4 +1,3 @@
-val org.gradle.accessors.dm.LibrariesForLibs.gson: kotlin.Any
 
 plugins {
     alias(libs.plugins.android.application)
@@ -44,4 +43,6 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation(libs.gson)
+
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
 }

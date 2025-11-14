@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
-import com.example.map_demo2.databinding.ActivityFavoriteListBinding;
+import com.example.labex8.databinding.ActivityFavoriteListBinding;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
