@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Displays all saved favorite places in a ListView as human-readable addresses.
+ * Displays all saved favorite places in a ListView
  */
 public class FavoriteListActivity extends AppCompatActivity {
 
@@ -35,7 +35,6 @@ public class FavoriteListActivity extends AppCompatActivity {
         binding = ActivityFavoriteListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Load places from SharedPreferences
         loadPlaces();
 
         // Convert lat/lng to addresses
@@ -49,11 +48,9 @@ public class FavoriteListActivity extends AppCompatActivity {
         );
         binding.listView.setAdapter(adapter);
 
-        // Handle back button
         binding.btnBack.setOnClickListener(v -> finish());
     }
 
-    /** Loads saved places from SharedPreferences */
     private void loadPlaces() {
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         Gson gson = new Gson();
@@ -66,7 +63,6 @@ public class FavoriteListActivity extends AppCompatActivity {
         }
     }
 
-    /** Converts a list of Place objects to human-readable addresses */
     private List<String> getAddressesFromPlaces(List<Place> places) {
         List<String> addressesList = new ArrayList<>();
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());

@@ -9,14 +9,12 @@ public class Place {
     private double latitude;
     private double longitude;
 
-    // Constructor
     public Place(String title, double latitude, double longitude) {
         this.title = title;
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    // Getters
     public String getTitle() {
         return title;
     }
@@ -29,7 +27,6 @@ public class Place {
         return longitude;
     }
 
-    // For displaying in ListView
     @Override
     public String toString() {
         return title + "\n(" + latitude + ", " + longitude + ")";
